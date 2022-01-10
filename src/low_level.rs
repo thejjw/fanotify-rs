@@ -358,8 +358,8 @@ pub fn fanotify_mark<P: ?Sized + FanotifyPath>(
             path.as_os_str()
                 .as_bytes()
                 .iter()
-                .map(|p| *p as i8)
-                .collect::<Vec<i8>>()
+                .map(|p| *p as u8)
+                .collect::<Vec<u8>>()
                 .as_ptr(),
         ) {
             0 => {
